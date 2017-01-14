@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Andrew M. Zhang</title>
+<script src='http://127.0.0.1:9001/js/socket.js'></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--
+	  <link type="text/css" rel="stylesheet" href="stylesheets/main.css" />
+		-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</head>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+
+.container-fluid {
+	padding-top: 70px;
+	padding-bottom: 70px;
+
+}
+
+.navbar {
+	background-color: transparent;
+	z-index: 9999;
+	border: 0;
+	border-radius: 0;
+	margin-bottom: 0;
+	font-size: 12px;
+	letter-spacing: 2px;
+}
+
+.navbar li a, .navbar .navbar-brand {
+	color: #444;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+	color: #f4511e !important;
+	background-color: #fff !important;
+}
+
+
+.navbar-default .navbar-toggle {
+	border-color: transparent;
+	color: #fff !important;
+}
+
+.jumbotron {
+	background-color: transparent;
+}
+
+img {
+	margin: auto;
+}
+
+.content {
+	max-width: 1000px;
+	margin: auto;
+}
+
+p {
+	font-size: 18px;
+}
+
+li {
+	font-size: 18px;
+}
+
+</style>
+
+<body id="myPage" >
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class = "navbar-header">
+				<a class="navbar-brand" href="index.html">Home</a>
+			</div>
+		</div>
+	</nav>
+	<div id="fullpage">
+
+		<div id="top">
+			<div class="container-fluid" >
+				<div>
+					<h1 class="text-center">{{ page.title }}</h1>
+				</div>
+
+				<div class="content">
+					{{ content }}
+
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>
