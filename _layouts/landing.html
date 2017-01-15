@@ -6,10 +6,9 @@
 <script src='http://127.0.0.1:9001/js/socket.js'></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <!--
-	  <link type="text/css" rel="stylesheet" href="stylesheets/main.css" />
-		-->
+<link type="text/css" rel="stylesheet" href="/css/landing.css" />
+-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -22,9 +21,34 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
 
-.fullpage {
-    max-width: 1000px;
-    margin: auto;
+.bg-1 {
+	vertical-align: middle;
+	background-color: #1abc9c;
+	color: #ffffff;
+}
+
+.bg-2 {
+    background-color: #2196f3; /* White */
+    color: #ffffff;
+}
+
+.bg-2 a {
+    color: #ffffff;
+}
+
+.bg-3 {
+	background-color: #474e5d; /* Dark Blue */
+	vertical-align: middle;
+	color: #ffffff;
+}
+
+.bg-4 {
+	background-color: #2f2f2f;
+	color: #ffffff;
+}
+
+#fullpage {
+    background-color: #3f51b5 !important;
 }
 .container-fluid {
 	padding-top: 70px;
@@ -82,16 +106,15 @@ img {
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul id="menu" class="nav navbar-nav navbar-right">
-					<li data-menuanchor="first"><a href="#first">Top</a></li>
+                    <li data-menuanchor="about"><a href="#about">About</a></li>
 					<li data-menuanchor="second"><a href="#second">Code Related Material</a></li>
-					<li data-menuanchor="third"><a href="#third">KSP</a></li>
 					<li data-menuanchor="footer"><a href="#footer">Contact Info</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 	<div id="fullpage">
-		<div id="top" class="section">
+		<div id="top" class="section bg-1">
 			<div class="container-fluid text-center" >
 				<div>
 					<div class="jumbotron">
@@ -103,26 +126,53 @@ img {
 						<h1>Andrew M. Zhang</h2>
 					</div>
 				</div>
+
+
+
+
 			</div>
 		</div>
 
-		<div id="code" class="section">
+        <div id="about" class="section bg-3">
+            <div  class="container-fluid text-center">
+                <div>
+                    <div class="jumbotron">
+                        <h1>About Andrew</h1>
+                    </div>
+                    <h3 style="max-width: 1000px; margin:auto">
+                    Current student of UC Berkeley. CS major.
+                    Stats major. EECS minor. Developer @ Geeni. This page contains some interesting projects
+                    and items. A lot of source is available on his <a href="http://github.com/andrewmzhang">Github!</a>
+                    </h3>
+
+                    <h3>
+                        Feel free to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#101;&#64;&#97;&#110;&#100;&#114;&#101;&#119;&#109;&#122;&#104;&#97;&#110;&#103;&#46;&#99;&#111;&#109;">&#101;&#109;&#97;&#105;&#108;</a>
+ him questions!
+                    </h3>
+
+
+                </div>
+            </div>
+        </div>
+
+
+		<div id="code" class="section bg-2">
 			<div  class="container-fluid text-center">
 				<div>
 					<div class="jumbotron">
 						<h1>Code Related Material</h1>
 					</div>
 					{% for category in site.categories %}
-                        <h3>{{ category[0] }}</h3>
+                        <h2>{{ category[0] }}</h2>
                             {% for post in category[1] %}
-                            <li class="h3 list-unstyled"><a href="{{ post.url }}">{{ post.title }}</a></li>
+                            <li class="h4 list-unstyled"><a href="{{ post.url }}">{{ post.title }}</a></li>
                             {% endfor %}
                     {% endfor %}
 				</div>
 			</div>
 		</div>
 
-		<footer class="section fp-auto-height container-fluid text-center">
+		<footer class="section fp-auto-height container-fluid text-center bg-4">
 			<h3>Contact Information</h3>
 			<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#101;&#64;&#97;&#110;&#100;&#114;&#101;&#119;&#109;&#122;&#104;&#97;&#110;&#103;&#46;&#99;&#111;&#109;">&#77;&#121;&#32;&#101;&#109;&#97;&#105;&#108;</a>
 			<a href="files/resume.pdf"   download="AndrewZhangResume">Resume (download)</a>
