@@ -1,0 +1,51 @@
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+}
+
+.navbar {
+    background-color: transparent;
+    z-index: 9999;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.navbar li a, .navbar .navbar-brand {
+    color: #444;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+}
+
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+
+.jumbotron {
+    background-color: transparent;
+}
+
+img {
+    margin: auto;
+}
+
+.content {
+    max-width: 1000px;
+    margin: auto;
+}
+
+p {
+    font-size: 18px;
+}
+
+li {
+    font-size: 18px;
+}

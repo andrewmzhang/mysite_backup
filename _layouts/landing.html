@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Andrew M. Zhang</title>
+<script src='http://127.0.0.1:9001/js/socket.js'></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--
+	  <link type="text/css" rel="stylesheet" href="stylesheets/main.css" />
+		-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+</head>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+
+.fullpage {
+    max-width: 1000px;
+    margin: auto;
+}
+.container-fluid {
+	padding-top: 70px;
+	padding-bottom: 70px;
+
+}
+
+.navbar {
+	background-color: transparent;
+	z-index: 9999;
+	border: 0;
+	border-radius: 0;
+	margin-bottom: 0;
+	font-size: 12px;
+	letter-spacing: 2px;
+}
+
+.navbar li a, .navbar .navbar-brand {
+	color: #fff !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+	color: #f4511e !important;
+	background-color: #fff !important;
+}
+
+
+.navbar-default .navbar-toggle {
+	border-color: transparent;
+	color: #fff !important;
+}
+
+
+.jumbotron {
+	background-color: transparent;
+}
+
+img {
+	margin: auto;
+}
+
+</style>
+
+<body id="myPage" >
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class = "navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#first">Me</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul id="menu" class="nav navbar-nav navbar-right">
+					<li data-menuanchor="first"><a href="#first">Top</a></li>
+					<li data-menuanchor="second"><a href="#second">Code Related Material</a></li>
+					<li data-menuanchor="third"><a href="#third">KSP</a></li>
+					<li data-menuanchor="footer"><a href="#footer">Contact Info</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div id="fullpage">
+		<div id="top" class="section">
+			<div class="container-fluid text-center" >
+				<div>
+					<div class="jumbotron">
+						<h1>Welcome to my website!</h1>
+						<h6>Last updated on October 9th, 2016</h6>
+					</div>
+					<img src="files/profile.jpg" alt="Andy" class="img-circle img-responsive">
+					<div class="jumbotron">
+						<h1>Andrew M. Zhang</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="code" class="section">
+			<div  class="container-fluid text-center">
+				<div>
+					<div class="jumbotron">
+						<h1>Code Related Material</h1>
+					</div>
+					{% for category in site.categories %}
+                        <h3>{{ category[0] }}</h3>
+                            {% for post in category[1] %}
+                            <li class="h3 list-unstyled"><a href="{{ post.url }}">{{ post.title }}</a></li>
+                            {% endfor %}
+                    {% endfor %}
+				</div>
+			</div>
+		</div>
+
+		<footer class="section fp-auto-height container-fluid text-center">
+			<h3>Contact Information</h3>
+			<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#101;&#64;&#97;&#110;&#100;&#114;&#101;&#119;&#109;&#122;&#104;&#97;&#110;&#103;&#46;&#99;&#111;&#109;">&#77;&#121;&#32;&#101;&#109;&#97;&#105;&#108;</a>
+			<a href="files/resume.pdf"   download="AndrewZhangResume">Resume (download)</a>
+		</footer>
+	</div>
+</body>
+</html>
