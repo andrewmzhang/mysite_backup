@@ -9,9 +9,9 @@ layout: landing
 <!--
 <h3>Posts</h3>
 <ul>
-  {% for post in site.posts %}
+  {% for post in site.collections %}
   <li>
-    <a href="{{ post.url }}">{{ post.title }}</a>
+    <a href="{{ post[1].permalink }}">{{ post[1].title }}</a>
   </li>
   {% endfor %}
 </ul>
