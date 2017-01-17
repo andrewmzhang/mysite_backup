@@ -22,7 +22,7 @@ categories:
 
 ## Description
 
-Kd trees allow for gemotric search in O(lg N) time. This is the concept: Upon
+Kd trees allow for geometric search in O(lg N) time. This is the concept: Upon
 every insertion into the KdTree structure, a node is added to a binary search
 tree. At every even numbered height, the new point is less than the point at the
 node if it falls to the left of the point. At every odd numbered height, less is
@@ -66,7 +66,7 @@ Make the hawk do the following:
 1. Accelerate towards the nearest boid.
 
 Neighbors of a boid are defined as the 10 nearest boids. This is achieved with
-the nearest neighbor search. THe runtime of the kNN search is possibly O(k * lg N),
+the nearest neighbor search. The runtime of the kNN search is possibly O(k * lg N),
 since k insertions into a bounded PQ is required.
 
 By tweaking weights for boid rules 1 thru 5, proper flocking may be achieved.
