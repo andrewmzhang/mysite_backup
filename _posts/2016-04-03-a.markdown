@@ -54,6 +54,7 @@ does not exceed size k by expelling the max node every time an exceed occurs.
 ## Boids and Hawks
 
 To implement the boids and hawk, make the boid follow these rules:
+
 1. Avoid colliding with the Hawk
 2. Avoid collision with neighbors
 3. Match velocity with neighbors
@@ -61,6 +62,7 @@ To implement the boids and hawk, make the boid follow these rules:
 5. Always accelerate towards the center (for viewing purposes)
 
 Make the hawk do the following:
+
 1. Accelerate towards the nearest boid.
 
 Neighbors of a boid are defined as the 10 nearest boids. This is achieved with
