@@ -11,8 +11,6 @@
 collections:
     algos:
         output: true
-    cs61a:
-        output: true
 
 
 
