@@ -14,10 +14,6 @@ collections:
     cs61a:
         output: true
 
-
-
-
-
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
@@ -30,7 +26,8 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "http://blog.andrewmzhang.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: andrewmzhang
-github_username: andrewmzhang 
+github_username: andrewmzhang
+repository: andrewmzhang/mysite
 
 # Build settings
 markdown: kramdown

@@ -38,36 +38,58 @@ This problem is recognizable as an Expectimax Tree. Simply put, an expectimax tr
 	\\
 </div>
 
+Subsequently, each state node can also be quantized as a value, which would be equal
+to the following equation:
 
+<div lang="latex">
+	Value(Node_x) = \{\max_{a_{0} \leq a_{i} \leq a_{10}} Value(a)\}
+</div>
 
+Given the value of the state node is equal to the value of the maximum valued action node,
+the best move at the state node must be equal to the action that yields the maximum
+expected value, or:
 
-
-
+<div lang="latex">
+	\DeclareMathOperator{\argmaxA}{arg\,max}_x Value(x) &= \{x \mid f(x) = Value(a_{x}) \}
+</div>
 
 Or, if one prefers a solve with Dynamic Programming:
 
 Here’s my logical deduction on how a final strategy can be developed:
 
-   First, we recognize that given a score and opponent’s score, there exists an optimal number of rolls. In other words, a best strategy exits for every score and opponent score
+1. First, we recognize that given a score and opponent’s score, there exists an optimal number of rolls. In other words, a best strategy exits for every score and opponent score
 
-   a. In theory you could devise a 100 x 100 matrix and try every single combination of 0 – 10 in each of the elements and see which configuration gives you the highest avg score. However, there are about 11^10,000 combinations, which is too many to solve for…
+    1. In theory you could devise a 100 x 100 matrix and try every single combination of 0 – 10 in each of the elements and see which configuration gives you the highest avg score. However, there are about 11^10,000 combinations, which is too many to solve for…
 
-   The best number of rolls must the be number of rolls that maximizes our chances of winning. This is the definition of the best number of rolls.
+2. The best number of rolls must the be number of rolls that maximizes our chances of winning. This is the definition of the best number of rolls.
 
-   Given 1 and 2, there must be a function such that, given score, opponent’s score, and number of dice to roll (k), it returns the probability of winning by rolling k number of dice.
+3. Given 1 and 2, there must be a function such that, given score, opponent’s score, and number of dice to roll (k), it returns the probability of winning by rolling k number of dice.
 
-   For the function works as follows: iterate through all possible points score-able by rolling k dice, find the (probability of scoring p with k dice) * (probability of winning with p points), and sum up all values. The sum is the probability of winning by rolling k dice.
+4. For the function works as follows: iterate through all possible points score-able by rolling k dice, find the (probability of scoring p with k dice) * (probability of winning with p points), and sum up all values. The sum is the probability of winning by rolling k dice.
 
-   a. The probability of scoring p points with k dice is a simple statistical problem.
+   1. The probability of scoring p points with k dice is a simple statistical problem.
 
-   b. The probability of winning with p points is a simple logical problem, described below:
+   2. The probability of winning with p points is a simple logical problem, described below:
 
-       I. If my score + p points >= 100, I’ve already won. Return 1
+       1. If my score + p points >= 100, I’ve already won. Return 1
 
-       II. If my opponent’s score >= 100, I’ve already lost. Return 0
+       2. If my opponent’s score >= 100, I’ve already lost. Return 0
 
-       III. If it’s not I or II, then I’ve made my move, but no one has yet won. Now my opponent will roll d dice, where d is the optimal number of dice for him/her (or 5, if you are playing vs the AI). The probability we will win is the probability the opponent will not win with d dice, or 1 – probability opponent wins by rolling d dice.
+       3. If it’s not I or II, then I’ve made my move, but no one has yet won. Now my opponent will roll d dice, where d is the optimal number of dice for him/her (or 5, if you are playing vs the AI). The probability we will win is the probability the opponent will not win with d dice, or 1 – probability opponent wins by rolling d dice.
 
-   Be aware: watch out for recursion depth, as it tends to get large. Also try storing things into tables so that we do not waste time calculating redundant things. aka Memoization
+5. Be aware: watch out for recursion depth, as it tends to get large. Also try storing things into tables so that we do not waste time calculating redundant things. aka Memoization
 
-   Be aware: of the special rules and when they apply. I got really badly tripped up since I didn't pay attention to the piggy back and piggy out rules. An interesting note is if one ignores the piggy back rule, a minimax tree will be unable to solve the problem, since there will be loops in the tree. Solving will require a Markov Decision Process.
+Be aware: of the special rules and when they apply. I got really badly tripped up since I didn't pay attention to the piggy back and piggy out rules. An interesting note is if one ignores the piggy back rule, a minimax tree will be unable to solve the problem, since there will be loops in the tree. Solving will require a Markov Decision Process.
+
+These logical steps should allow for the proper solving of the CS61A Hog problem.
+
+
+### Sources used:
+
+[A PDF I found from a google search](http://www.scsb.org/codingchallenge/pig.pdf)
+
+Tips from CS Gods: Aurick Zhou and Alvin Kao
+
+Pointers from: Morgan Reschenberg, Sandy Zhang, and Joan Zhu
+
+Judgement from: Eric Liu, Andrew Chen
