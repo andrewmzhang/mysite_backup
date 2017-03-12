@@ -1,6 +1,7 @@
 ---
 layout: page
 title:  Kd Tree + Boid Animations
+description: Simulation of a flock of 10k boids + 1 hawk with Kd-Tree implementation.
 date:   2017-01-12 11:47:12 -0800
 ---
 

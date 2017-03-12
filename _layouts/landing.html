@@ -113,97 +113,27 @@
 
             <div class="row">
 
-                <!--First columnn-->
-                <div class="col-md-3">
-                    <div class="card wow fadeInUp">
+                {% for post in site.algos %}
+                    <!--Columnn-->
+                    <div class="col-md-3" style="padding-bottom: 30px">
+                        <div class="card wow fadeInUp">
 
-                       <!--Card content-->
-                       <div class="card-block text-center">
-                           <!--Title-->
-                           <h4 class="card-title">Card title</h4>
-                           <hr>
-                           <!--Text-->
-                           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident fuga animi architecto dolores dicta cum quo velit.</p>
+                            <!--Card content-->
+                            <div class="card-block text-center">
+                                <!--Title-->
+                                <h4 class="card-title">{{post.title}}</h4>
+                                <hr>
+                                <!--Text-->
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident fuga animi architecto dolores dicta cum quo velit.</p>
+                            </div>
+                           <!--/.Card content-->
+
                        </div>
-                       <!--/.Card content-->
-
                    </div>
-                </div>
-                <!--First columnn-->
-
-                <!--Second columnn-->
-                <div class="col-md-3">
-                  <div class="card wow fadeInUp">
-
-                     <!--Card content-->
-                     <div class="card-block text-center">
-                         <!--Title-->
-                         <h4 class="card-title">Card title</h4>
-                         <hr>
-                         <!--Text-->
-                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident fuga animi architecto dolores dicta cum quo velit.</p>
-                     </div>
-                     <!--/.Card content-->
-
-                  </div>
-                </div>
-                <!--Second columnn-->
-
-                <!--Third columnn-->
-                <div class="col-md-3">
-                  <div class="card wow fadeInUp">
-
-                     <!--Card content-->
-                     <div class="card-block text-center">
-                         <!--Title-->
-                         <h4 class="card-title">Card title</h4>
-                         <hr>
-                         <!--Text-->
-                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident fuga animi architecto dolores dicta cum quo velit.</p>
-                     </div>
-                     <!--/.Card content-->
-
-                  </div>
-                </div>
-                <!--Third columnn-->
-
-                <!--Fourth columnn-->
-                <div class="col-md-3">
-                  <div class="card wow fadeInUp">
-
-                     <!--Card content-->
-                     <div class="card-block text-center">
-                         <!--Title-->
-                         <h4 class="card-title">Card title</h4>
-                         <hr>
-                         <!--Text-->
-                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident fuga animi architecto dolores dicta cum quo velit.</p>
-                     </div>
-                     <!--/.Card content-->
-
-                  </div>
-                </div>
-                <!--Fourth columnn-->
+                   <!--Columnn-->
+                {% endfor %}
 
 
-
-                <!--Fifth columnn-->
-                <div class="col-md-3">
-                  <div class="card wow fadeInUp">
-
-                     <!--Card content-->
-                     <div class="card-block text-center">
-                         <!--Title-->
-                         <h4 class="card-title">4 card title</h4>
-                         <hr>
-                         <!--Text-->
-                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident fuga animi architecto dolores dicta cum quo velit.</p>
-                     </div>
-                     <!--/.Card content-->
-
-                  </div>
-                </div>
-                <!--Fifth columnn-->
 
 
             </div>

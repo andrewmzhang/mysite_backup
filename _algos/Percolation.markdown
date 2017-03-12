@@ -1,6 +1,8 @@
 ---
 layout: page
 title:  Percolation
+description: Solution to the backwash issue in the Princeton Percolation problem.
+date:   2016-01-12 08:00:00 -0800
 ---
 
 ## Problem Statement

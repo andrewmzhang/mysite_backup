@@ -1,6 +1,7 @@
 ---
 layout: page
 title:  Hog Optimal Solve FA2015
+description: Here's my version of solving the Fall 2015 version of the game of hog.
 date:   2016-6-12 11:47:12 -0800
 ---
 
