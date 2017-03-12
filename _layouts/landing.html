@@ -11,11 +11,11 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
-    <link href="css/mdb.min.css" rel="stylesheet">
+    <link href="../css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -37,8 +37,8 @@
 
         <div class="collapse navbar-collapse" id="collapseEx2">
             <ul class="navbar-nav mr-auto"></ul>
-            <ul class="navbar-nav">
-                <li class="nav-item">
+            <ul class="navbar-nav smooth-scroll">
+                <li class="nav-item" data-menuanchor="about">
                     <a class="nav-link" href="#about">About</a>
                 </li>
                 <li class="nav-item">
@@ -81,14 +81,13 @@
 
 
     <!-- Main container-->
-    <div class="container">
+    <div class="container container-content">
 
-        <div class="divider-new">
+        <div id="about" class="divider-new anchor">
             <h1 class="h1-responsive">About Andrew</h1>
         </div>
-
         <!--Section: About-->
-        <section id="about" class="text-center wow fadeInUp">
+        <section  class="text-center wow fadeInUp">
             <h3 style="max-width: 1000px; margin:auto">
                 Current student of UC Berkeley. CS major.
                 EEC minor. Developer @ Geeni. This page contains some interesting projects

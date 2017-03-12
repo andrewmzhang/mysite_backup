@@ -6,6 +6,7 @@ html,
 body,
 .view {
     height: 100%;
+    position: relative;
 }
 
 .flex-center {
@@ -38,13 +39,18 @@ img {
 
 }
 
+
 .navbar {
+    z-index: 9999;
+	border: 0;
+	border-radius: 0;
+	margin-bottom: 0;
     background-color: transparent;
 }
-
 .navbar-dark .navbar-nav .nav-link {
     color: #fff;
 }
+
 .scrolling-navbar {
         -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
@@ -55,8 +61,7 @@ img {
     background-color: #1C2331;
 }
 
-
-#coding {
-
-  
+.anchor {
+    padding-top: 90px;
+    margin-top: -50px;
 }
