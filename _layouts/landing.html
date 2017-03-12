@@ -42,10 +42,10 @@
                     <a class="nav-link" href="#about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link">Code Related Material</a>
+                    <a class="nav-link" href="#coding">Code Related Material</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link">Contact Info</a>
+                    <a class="nav-link" href="#info">Contact Info</a>
                 </li>
             </ul>
         </div>
@@ -103,7 +103,7 @@
         <!--Section: About-->
 
 
-        <div class="divider-new">
+        <div id="coding" class="divider-new anchor">
             <h1 class="h1-responsive">Coding Reports</h1>
         </div>
 
@@ -113,17 +113,18 @@
             <div class="row">
 
                 {% for post in site.algos %}
+                  {% assign delay = forloop.index | divided_by:4.0 %}
+
                     <!--Columnn-->
                     <div class="col-md-3" style="padding-bottom: 30px">
-                        <div class="card wow fadeInUp">
-
+                        <div class="card wow fadeInUp" data-wow-delay="{{delay}}s">
                             <!--Card content-->
                             <div class="card-block text-center">
                                 <!--Title-->
-                                <h4 class="card-title">{{post.title}}</h4>
+                                <a  class="h4 card-title" href="{{post.url}}">{{post.title}}</a>
                                 <hr>
                                 <!--Text-->
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident fuga animi architecto dolores dicta cum quo velit.</p>
+                                <a class="p card-text" href="{{post.url}}">{{post.description}}</a>
                             </div>
                            <!--/.Card content-->
 
@@ -144,7 +145,7 @@
 
 
 
-        <div class="divider-new">
+        <div id="info" class="divider-new anchor">
             <h1 class="h1-responsive">Information</h1>
         </div>
 
