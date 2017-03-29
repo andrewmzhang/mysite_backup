@@ -179,16 +179,39 @@
 
 
 
+      <script type="text/javascript">
+function downloadJSAtOnload() {
+var element = document.createElement("script");
+element.src = "../js/jquery-3.1.1.min.js";
+document.body.appendChild(element);
 
-      <!-- JQuery -->
+var element = document.createElement("script");
+element.src = "../js/tether.min.js";
+document.body.appendChild(element);
+
+var element = document.createElement("script");
+element.src = "../js/bootstrap.min.js";
+document.body.appendChild(element);
+
+var element = document.createElement("script");
+element.src = "../js/mdb.min.js";
+document.body.appendChild(element);
+
+}
+if (window.addEventListener)
+window.addEventListener("load", downloadJSAtOnload, false);
+else if (window.attachEvent)
+window.attachEvent("onload", downloadJSAtOnload);
+else window.onload = downloadJSAtOnload;
+</script>
+
+
+  <!--
       <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
-      <!-- Bootstrap tooltips -->
       <script type="text/javascript" src="../js/tether.min.js"></script>
-      <!-- Bootstrap core JavaScript -->
       <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-      <!-- MDB core JavaScript -->
       <script type="text/javascript" src="../js/mdb.min.js"></script>
-
+    -->
 
       <!--Animations initialization-->
       <script>
