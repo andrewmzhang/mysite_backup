@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: other 
 title:  Percolation
 description: Solution to the backwash without 2 Quick Unions.
 date:   2016-01-12 08:00:00 -0800

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: other 
 title:  EE16B Car Project SP17 [Incomplete]
 description: Here's my version of solving the Fall 2015 version of the game of hog.
 date:   2017-3-29 20:01:00 -0800

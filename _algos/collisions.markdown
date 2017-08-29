@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: other
 title:  Collision Systems Simulation [Almost Complete]
 description: Attempt to simulate, with physical accuracy, a system of 2D colliding particles.
 date:   2017-3-7 7:41:12 -0800
